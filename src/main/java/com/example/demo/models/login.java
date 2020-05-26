@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 // @data is for lombok
 // @Entity is for java persistence. It will make a table in database.
 
-public class Author extends AuditModel{
+public class login extends AuditModel{
     @Id //it makes id as primary key
     @GeneratedValue(strategy = GenerationType.AUTO) //Auto assign id values
     Integer id;
@@ -20,6 +20,8 @@ public class Author extends AuditModel{
     @NotNull
     @Column(unique = true)//makes email unique
     String email;
+    @NotNull
+    String password;
     @NotNull
     String contactNumber;
 //    lombok would be used to get getter and setter
